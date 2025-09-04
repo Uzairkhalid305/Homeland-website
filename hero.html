@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homeland</title>
+  <link rel="stylesheet" href="./hero.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="overlay" id="overlay"></div>
+
+    <nav>
+      <div class="logo">
+        <span>HomeLand.</span>
+      </div>
+
+      <ul id="nav-menu">
+        <span class="close-menu" id="close-menu">
+        </span>
+
+        <li><a href="./hero.html"></i> Home</a></li>
+        <li>
+          <a href="./buy.html"> Buy</a>
+        </li>
+        <li><a href="./rent.html">Rent</a></li>
+        <li>
+          <a href="./properties.html"> Properties <i class="fas fa-chevron-down dropdown-chevron"></i></a>
+          <ul>
+            <li><a href="#">Condo</a></li>
+            <li><a href="#">Property land</a></li>
+            <li><a href="#">Commercial Building</a></li>
+            <li>
+          <a href="#"> Sub menu <i class="fas fa-chevron-down dropdown-chevron"></i></a>
+          <ul>
+            <li><a href="#">menu 1</a></li>
+            <li><a href="#">menu 2</a></li>
+            <li><a href="#">menu 3</a></li>
+
+          </ul>
+        </li>
+          </ul>
+        </li>
+        <li><a href="./blog.html"> Blogs</a></li>
+        <li><a href="./about.html"> About</a></li>
+        <li><a href="./contact.html"> Contact</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="hero">
+      <div class="tag" id="tag">FOR RENT</div>
+      <h1 id="address">871 CRENSHAW BLVD</h1>
+      <div class="price" id="price">$2,250,500</div>
+      <a href="#" class="btn">SEE DETAILS</a>
+
+      <div class="arrow left" onclick="prevSlide()">&#10094;</div>
+      <div class="arrow right" onclick="nextSlide()">&#10095;</div>
+    </div>
+
+
+    <!-- section 2 -->
+    <div class="search-box">
+  <form>
+    <div class="form-group">
+      <label>LISTING TYPES</label>
+      <select>
+        <option>Condo</option>
+        <option>Property Land</option>
+        <option>Commercial</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>OFFER TYPE</label>
+      <select>
+        <option>For Sale</option>
+        <option>For Rent</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>SELECT CITY</label>
+      <select>
+        <option>New York</option>
+        <option>Los Angeles</option>
+        <option>Chicago</option>
+      </select>
+    </div>
+
+    <button type="submit">Search</button>
+  </form>
+</div>
+
+<!-- toggle -->
+  <div class="toggle-buttons">
+    <div class="grid-buttons">
+
+      <button id="grid-view" class="active">⁝⁝⁝</button>
+      <button id="list-view">≡</button>
+    </div>
+  <div class="filter-sort">
+    <!-- Filter Links -->
+    <div class="filter-links">
+      <a href="#" class="active">All</a>
+      <a href="#">Rent</a>
+      <a href="#">Sale</a>
+    </div>
+
+    <!-- Sort Dropdown -->
+    <div class="sort-select">
+      <select>
+        <option>Sort by</option>
+        <option>Price (Low → High)</option>
+        <option>Price (High → Low)</option>
+        <option>Newest</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+  <!-- Boxes -->
+  <div class="boxes grid-view">
+    <!-- box-1 -->
+    <div class="box">
+      <div class="img-dtl">
+        <img src="./assets/hero_bg_1.jpg.webp" alt="House">
+        <div class="rent-sale">
+          <button class="sale">SALE</button>
+          <button class="rent">RENT</button>
+        </div>
+        <div class="heart-btn">
+          <button class="heart"><img src="./assets/bx-heart.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="text-dtl">
+        <h3>625 S. Berendo St</h3>
+<p>
+  <span class="location-icon"></span>
+  625 S. Berendo St Unit 607 Los Angeles, CA 90005
+</p>
+<p class="list-extra" style="display:none">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolorem tenetur magni. Aspernatur odit rem repudiandae cumque tenetur enim consequuntur esse.
+  </p>
+        <strong>$2,265,500</strong>
+
+        <h5>BEDS&nbsp;&nbsp;&nbsp; BATHS&nbsp;&nbsp;&nbsp; SQFT</h5>
+        <h4>2+&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;7,000</h4>
+
+      </div>
+    </div>
+    <!-- box-2 -->
+    <div class="box">
+      <div class="img-dtl">
+        <img src="./assets/hero_bg_2.jpg.webp" alt="House">
+         <div class="rent-sale">
+          <button class="sale">SALE</button>
+          <button class="rent">RENT</button>
+        </div>
+        <div class="heart-btn">
+          <button class="heart"><img src="./assets/bx-heart.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="text-dtl">
+        <h3>871 Crenshaw Blvd</h3>
+        <p>  <span class="location-icon"></span>1 New York Ave, Warners Bay, NSW 2282</p>
+        <p class="list-extra" style="display:none">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolorem tenetur magni. Aspernatur odit rem repudiandae cumque tenetur enim consequuntur esse.
+  </p>
+        <strong>$2,265,500</strong>
+        <h5>BEDS&nbsp;&nbsp;&nbsp; BATHS&nbsp;&nbsp;&nbsp; SQFT</h5>
+        <h4>2+&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;1,620</h4>
+
+      </div>
+    </div>
+    <!-- box-3-->
+    <div class="box">
+      <div class="img-dtl">
+        <img src="./assets/hero_bg_1.jpg.webp" alt="House">
+         <div class="rent-sale">
+         <button class="lease">LEASE</button>
+        </div>
+        <div class="heart-btn">
+          <button class="heart"><img src="./assets/bx-heart.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="text-dtl">
+        <h3>853 S Lucerne Blvd</h3>
+        <p><span class="location-icon"></span> 853 S Lucerne Blvd Unit 101 Los Angeles, CA 90005</p>
+        <p class="list-extra" style="display:none">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolorem tenetur magni. Aspernatur odit rem repudiandae cumque tenetur enim consequuntur esse.
+  </p>
+        <strong>$2,265,500</strong>
+        <h5>BEDS&nbsp;&nbsp;&nbsp; BATHS&nbsp;&nbsp;&nbsp; SQFT</h5>
+        <h4>2+&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;5,500</h4>
+
+      </div>
+    </div>
+    <!-- box-4 -->
+      <div class="box">
+      <div class="img-dtl">
+        <img src="./assets/hero_bg_1.jpg.webp" alt="House">
+        <div class="rent-sale">
+          <button class="sale">SALE</button>
+          <button class="rent">RENT</button>
+        </div>
+        <div class="heart-btn">
+          <button class="heart"><img src="./assets/bx-heart.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="text-dtl">
+        <h3>625 S. Berendo St</h3>
+<p>
+  <span class="location-icon"></span>
+  625 S. Berendo St Unit 607 Los Angeles, CA 90005
+</p>
+<p class="list-extra" style="display:none">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolorem tenetur magni. Aspernatur odit rem repudiandae cumque tenetur enim consequuntur esse.
+  </p>
+        <strong>$2,265,500</strong>
+        <h5>BEDS&nbsp;&nbsp;&nbsp; BATHS&nbsp;&nbsp;&nbsp; SQFT</h5>
+        <h4>2+&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;7,000</h4>
+
+      </div>
+    </div>
+<!-- box-5 -->
+ <div class="box">
+      <div class="img-dtl">
+        <img src="./assets/hero_bg_2.jpg.webp" alt="House">
+         <div class="rent-sale">
+          <button class="sale">SALE</button>
+          <button class="rent">RENT</button>
+        </div>
+        <div class="heart-btn">
+          <button class="heart"><img src="./assets/bx-heart.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="text-dtl">
+        <h3>871 Crenshaw Blvd</h3>
+        <p>  <span class="location-icon"></span>1 New York Ave, Warners Bay, NSW 2282</p>
+        <p class="list-extra" style="display:none">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolorem tenetur magni. Aspernatur odit rem repudiandae cumque tenetur enim consequuntur esse.
+  </p>
+        <strong>$2,265,500</strong>
+        <h5>BEDS&nbsp;&nbsp;&nbsp; BATHS&nbsp;&nbsp;&nbsp; SQFT</h5>
+        <h4>2+&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;1,620</h4>
+
+      </div>
+    </div>
+<!-- box-6 -->
+     <div class="box">
+      <div class="img-dtl">
+        <img src="./assets/hero_bg_1.jpg.webp" alt="House">
+         <div class="rent-sale">
+          <button class="lease">LEASE</button>
+        </div>
+        <div class="heart-btn">
+          <button class="heart"><img src="./assets/bx-heart.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="text-dtl">
+        <h3>853 S Lucerne Blvd</h3>
+        <p><span class="location-icon"></span> 853 S Lucerne Blvd Unit 101 Los Angeles, CA 90005</p>
+        <p class="list-extra" style="display:none">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolorem tenetur magni. Aspernatur odit rem repudiandae cumque tenetur enim consequuntur esse.
+  </p>
+        <strong>$2,265,500</strong>
+        <h5>BEDS&nbsp;&nbsp;&nbsp; BATHS&nbsp;&nbsp;&nbsp; SQFT</h5>
+        <h4>2+&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;5,500</h4>
+
+      </div>
+    </div>
+    <!-- box-7 -->
+      <div class="box">
+      <div class="img-dtl">
+        <img src="./assets/hero_bg_1.jpg.webp" alt="House">
+        <div class="rent-sale">
+          <button class="sale">SALE</button>
+          <button class="rent">RENT</button>
+        </div>
+        <div class="heart-btn">
+          <button class="heart"><img src="./assets/bx-heart.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="text-dtl">
+        <h3>625 S. Berendo St</h3>
+<p>
+  <span class="location-icon"></span>
+  625 S. Berendo St Unit 607 Los Angeles, CA 90005
+</p>
+<p class="list-extra" style="display:none">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolorem tenetur magni. Aspernatur odit rem repudiandae cumque tenetur enim consequuntur esse.
+  </p>
+        <strong>$2,265,500</strong>
+        <h5>BEDS&nbsp;&nbsp;&nbsp; BATHS&nbsp;&nbsp;&nbsp; SQFT</h5>
+        <h4>2+&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;7,000</h4>
+
+      </div>
+    </div>
+    <!-- box-8 -->
+ <div class="box">
+      <div class="img-dtl">
+        <img src="./assets/hero_bg_2.jpg.webp" alt="House">
+         <div class="rent-sale">
+          <button class="sale">SALE</button>
+          <button class="rent">RENT</button>
+        </div>
+        <div class="heart-btn">
+          <button class="heart"><img src="./assets/bx-heart.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="text-dtl">
+        <h3>871 Crenshaw Blvd</h3>
+        <p>  <span class="location-icon"></span>1 New York Ave, Warners Bay, NSW 2282</p>
+        <p class="list-extra" style="display:none">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolorem tenetur magni. Aspernatur odit rem repudiandae cumque tenetur enim consequuntur esse.
+  </p>
+        <strong>$2,265,500</strong>
+        <h5>BEDS&nbsp;&nbsp;&nbsp; BATHS&nbsp;&nbsp;&nbsp; SQFT</h5>
+        <h4>2+&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;1,620</h4>
+
+      </div>
+    </div>
+    <!-- box-9 -->
+    <div class="box">
+      <div class="img-dtl">
+        <img src="./assets/hero_bg_1.jpg.webp" alt="House">
+         <div class="rent-sale">
+          <button class="lease">LEASE</button>
+        </div>
+        <div class="heart-btn">
+          <button class="heart"><img src="./assets/bx-heart.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="text-dtl">
+        <h3>853 S Lucerne Blvd</h3>
+        <p><span class="location-icon"></span> 853 S Lucerne Blvd Unit 101 Los Angeles, CA 90005</p>
+        <p class="list-extra" style="display:none">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolorem tenetur magni. Aspernatur odit rem repudiandae cumque tenetur enim consequuntur esse.
+  </p>
+        <strong>$2,265,500</strong>
+        <h5>BEDS&nbsp;&nbsp;&nbsp; BATHS&nbsp;&nbsp;&nbsp; SQFT</h5>
+        <h4>2+&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;5,500</h4>
+
+      </div>
+    </div>
+    
+
+  </div>
+      <div class="counts">
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+      <span>...</span>
+      <button>10</button>
+    </div>
+
+
+
+    <!-- why chose -->
+      <section class="choose-section">
+    <h2>WHY CHOOSE US?</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maiores quisquam
+      saepe architecto error corporis aliquam. Cum ipsam a consectetur aut sunt sint animi.
+    </p>
+
+    <div class="choose-container">
+      <div class="choose-box">
+        <i class="fa-solid fa-building"></i>
+        <h3>Research Suburbs</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestiae.</p>
+        <a href="#">READ MORE</a>
+      </div>
+
+      <div class="choose-box">
+        <i class="fa-solid fa-sign-hanging"></i>
+        <h3>Sold Houses</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestiae.</p>
+        <a href="#">READ MORE</a>
+      </div>
+
+      <div class="choose-box">
+        <i class="fa-solid fa-video"></i>
+        <h3>Security Priority</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestiae.</p>
+        <a href="#">READ MORE</a>
+      </div>
+    </div>
+  </section>
+
+<!-- recent blog -->
+ <section class="recent-blog">
+    <h2>RECENT BLOG</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur
+      architecto error corporis aliquam. Cum ipsam a consectetur aut sunt sint animi, pariatur
+      corporis, eaque, deleniti cupiditate officia.
+    </p>
+
+    <div class="blog-container">
+      <!-- Blog 1 -->
+      <div class="blog-card">
+        <img src="/assets/h-5.webp" alt="House 1">
+        <div class="blog-content">
+          <span>JAN 20TH, 2019</span>
+          <h3><a href="#">Art Gossip by Mike Charles</a></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim, ipsa exercitationem veniam quae sunt.</p>
+        </div>
+      </div>
+
+      <!-- Blog 2 -->
+      <div class="blog-card">
+        <img src="/assets/h-6.webp" alt="House 2">
+        <div class="blog-content">
+          <span>JAN 20TH, 2019</span>
+          <h3><a href="#">Art Gossip by Mike Charles</a></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim, ipsa exercitationem veniam quae sunt.</p>
+        </div>
+      </div>
+
+      <!-- Blog 3 -->
+      <div class="blog-card">
+        <img src="/assets/h-7.webp" alt="House 3">
+        <div class="blog-content">
+          <span>JAN 20TH, 2019</span>
+          <h3><a href="#">Art Gossip by Mike Charles</a></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim, ipsa exercitationem veniam quae sunt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- agent section -->
+ <section class="agents-section">
+    <h2>OUR AGENTS</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero magnam officiis ipsa eum <br>
+      pariatur labore fugiat amet eaque iure vitae, repellendus laborum in modi reiciendis quis!</p>
+
+    <div class="agents-container">
+      
+      <div class="agent-card">
+        <img src="/assets/person_1.jpg.webp" alt="Megan Smith">
+        <div class="agent-info">
+          <h3>Megan Smith</h3>
+          <span>Real Estate Agent</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est.</p>
+        </div>
+        <div class="social-links">
+  <a href="#"><i class="fab fa-facebook-f"></i></a>
+  <a href="#"><i class="fab fa-twitter"></i></a>
+  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="agent-card">
+        <img src="/assets/person_2.jpg.webp" alt="Brooke Cagle">
+        <div class="agent-info">
+          <h3>Brooke Cagle</h3>
+          <span>Real Estate Agent</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cumque vitae voluptates culpa earum similique corrupti.</p>
+        </div>
+        <div class="social-links">
+  <a href="#"><i class="fab fa-facebook-f"></i></a>
+  <a href="#"><i class="fab fa-twitter"></i></a>
+  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="agent-card">
+        <img src="/assets/person_3.jpg.webp" alt="Philip Martin">
+        <div class="agent-info">
+          <h3>Philip Martin</h3>
+          <span>Real Estate Agent</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores illo iusto, inventore, iure dolorum officiis.</p>
+        </div>
+        <div class="social-links">
+  <a href="#"><i class="fab fa-facebook-f"></i></a>
+  <a href="#"><i class="fab fa-twitter"></i></a>
+  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- footer -->
+   <footer>
+    <div class="footer-container">
+      <!-- About -->
+      <div class="footer-col">
+        <h4>About Homeland</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Saepe pariatur reprehenderit vero atque, consequatur id ratione,
+          et non dignissimos culpa? Ut veritatis, quos illum totam
+          quis blanditiis, minima minus odio!
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div class="footer-col">
+        <h4>Navigations</h4>
+        <div class="order-list">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Buy</a></li>
+            <li><a href="#">Rent</a></li>
+            <li><a href="#">Properties</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Social -->
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      Copyright ©2025 All rights reserved |
+      This template is made with <i class="fa-solid fa-heart"></i> by Colorlib
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+  <script src="/hero.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const gridBtn = document.getElementById("grid-view");
+  const listBtn = document.getElementById("list-view");
+  const boxes = document.querySelector(".boxes");
+
+  gridBtn.addEventListener("click", () => {
+    boxes.classList.add("grid-view");
+    boxes.classList.remove("list-view");
+    gridBtn.classList.add("active");
+    listBtn.classList.remove("active");
+  });
+
+  listBtn.addEventListener("click", () => {
+    boxes.classList.add("list-view");
+    boxes.classList.remove("grid-view");
+    listBtn.classList.add("active");
+    gridBtn.classList.remove("active");
+  });
+});
+
+// ...
+
+  </script>
+</body>
+
+</html>

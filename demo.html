@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid/List Toggle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f9f9f9;
+    }
+
+    /* Toggle buttons */
+    .toggle-buttons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .toggle-buttons button {
+      border: none;
+      background: #eee;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    .toggle-buttons button.active {
+      background: #222;
+      color: #fff;
+    }
+
+    /* Boxes container */
+    .boxes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .box {
+      background: #fff;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .img-dtl img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .text-dtl {
+      padding: 15px;
+    }
+
+    /* --- LIST VIEW --- */
+    .boxes.list-view {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .boxes.list-view .box {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      width: 100%;
+    }
+
+    .boxes.list-view .img-dtl {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    .boxes.list-view .img-dtl img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .boxes.list-view .text-dtl {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .boxes.grid-view {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .boxes.grid-view {
+        grid-template-columns: 1fr;
+      }
+      .boxes.list-view .box {
+        flex-direction: column;
+      }
+      .boxes.list-view .img-dtl {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Toggle Buttons -->
+  <div class="toggle-buttons">
+    <button id="grid-view" class="active">☷ Grid</button>
+    <button id="list-view">≡ List</button>
+  </div>
+
+  <!-- Boxes -->
+  <div class="boxes grid-view">
+    <div class="box">
+      <div class="img-dtl">
+        <img src="https://via.placeholder.com/400x250" alt="House">
+      </div>
+      <div class="text-dtl">
+        <h3>625 S. Berendo St</h3>
+        <p>Los Angeles, CA 90005</p>
+        <strong>$2,265,500</strong>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img-dtl">
+        <img src="https://via.placeholder.com/400x250" alt="House">
+      </div>
+      <div class="text-dtl">
+        <h3>742 Evergreen Terrace</h3>
+        <p>Springfield</p>
+        <strong>$1,850,000</strong>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img-dtl">
+        <img src="https://via.placeholder.com/400x250" alt="House">
+      </div>
+      <div class="text-dtl">
+        <h3>123 Ocean Drive</h3>
+        <p>Miami, FL</p>
+        <strong>$3,200,000</strong>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const gridBtn = document.getElementById("grid-view");
+    const listBtn = document.getElementById("list-view");
+    const boxes = document.querySelector(".boxes");
+
+    gridBtn.addEventListener("click", () => {
+      boxes.classList.add("grid-view");
+      boxes.classList.remove("list-view");
+      gridBtn.classList.add("active");
+      listBtn.classList.remove("active");
+    });
+
+    listBtn.addEventListener("click", () => {
+      boxes.classList.add("list-view");
+      boxes.classList.remove("grid-view");
+      listBtn.classList.add("active");
+      gridBtn.classList.remove("active");
+    });
+  </script>
+</body>
+</html>
